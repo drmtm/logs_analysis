@@ -71,7 +71,7 @@ python log_analysis.py
 ```
 
 ### Sample output
-![](./screenshot.png)
+![](https://github.com/drmtm/logs_analysis/blob/master/Screenshot.png)
 
 ## Built With
 
