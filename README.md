@@ -100,7 +100,14 @@ second view
 ```
 create view total_req as select date(log.time) as Date ,count(status)as total_req from log  group by date(log.time) ;
 ```
+alternatively you can import the file "createviews.sql" directly to the database by running the command :
 
+```
+ psql -d news -f createviews.sql
+
+```
+
+where the previous create view command will be executed automaticly
 
 ## Running the tool
 
