@@ -46,6 +46,48 @@ creat view ....
 
 ### Installing
 
+** installing python 3
+
+please visit the link provided below in the "built with" section and follow the instruction 
+to install python 3 on your system.
+
+** installing postgreSQL
+
+please visit the link provided below in the "built with" section and follow the instruction 
+to install postgreSQL on your system.
+
+** setting the "News" database
+first you have to create the "news" database by running the following commands
+log in to the postgre database system (you must have enough privileges for your account)
+```
+psql
+```
+then run the create database command
+
+```
+create database news;
+
+```
+
+then Download the data
+
+Next, download the data [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip). You will need to unzip this file after downloading it. The file inside is called newsdata.sql.
+To run the reporting tool, you'll need to load the site's data into your local database. 
+To load the data, cd into the downloaded file directory and use the command
+```
+ psql -d news -f newsdata.sql
+
+```
+
+Here's what this command does:
+
+    psql — the PostgreSQL command line program
+    -d news — connect to the database named news which has been created in the last step
+    -f newsdata.sql — run the SQL statements in the file newsdata.sql
+
+Running this command will connect to your installed database server and execute the SQL commands in the downloaded file, creating tables and populating them with data. 
+
+** creating required views
 in order for this reporting tool to work succefully please create the required views 
 as follow ...
 
